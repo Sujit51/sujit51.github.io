@@ -1,0 +1,210 @@
+baseURL: "https://sujit51.github.io"
+languageCode: "en-us"
+title: "Sujit Yadawad"
+theme: "hugo-profile"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: about
+      name: About
+      title: About
+      url: "#about"
+      weight: 1
+    - identifier: experience
+      name: Experience
+      title: Experience
+      url: "#experience"
+      weight: 2
+    - identifier: skills
+      name: Skills
+      title: Skills
+      url: "#skills"
+      weight: 3
+    - identifier: cv
+      name: CV
+      title: Download CV
+      url: "/cv/Sujit_Yadawad_CV.pdf"
+      weight: 4
+
+params:
+  title: "Sujit Yadawad"
+  description: "Sujit Yadawad - Senior iOS & Backend Software Engineer"
+  staticPath: ""
+  favicon: ""
+
+  theme:
+    defaultTheme: "dark"
+    disableThemeToggle: false
+
+  font:
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Sujit Yadawad"
+    disableSearch: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Sujit Yadawad."
+    subtitle: "I build high-traffic iOS apps and the backend that powers them."
+    content: "Software engineer with 14+ years shipping customer-facing mobile features in Swift and Objective-C, and designing, building, and operating server-side services on AWS. I own features end to end, from the native client through the service layer to analytics."
+    image: ""
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Download CV"
+      url: "/cv/Sujit_Yadawad_CV.pdf"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: "https://www.linkedin.com/in/sujit-yadawad"
+        - icon: fab fa-github
+          url: "https://github.com/Sujit51"
+        - icon: fas fa-envelope
+          url: "mailto:sujit.yadawad@gmail.com"
+
+  about:
+    enable: true
+    title: "About Me"
+    content: |
+      I am a software engineer with over 14 years of experience building
+      high-traffic iOS applications and the backend services behind them.
+
+      At Amazon I build for the Indian emerging market: the top-of-app
+      navigation surface that routes millions of shoppers to Amazon Pay,
+      Amazon Now, and Bazaar, native skeleton-loading that improved
+      perceived performance across high-traffic surfaces, and the backend
+      and data pipelines of the Shopping Aids Platform.
+
+      I care about performance, reliability, and craft at scale, and I enjoy
+      mentoring the engineers around me.
+    skills:
+      enable: true
+      title: "A few technologies I work with:"
+      items:
+        - "Swift / Objective-C"
+        - "UIKit & SwiftUI"
+        - "VIPER / MVVM"
+        - "AWS (DynamoDB, Lambda, CloudWatch)"
+        - "Coral service framework"
+        - "Data pipelines (DynamoDB Streams, Andes)"
+        - "A/B testing (Weblab)"
+        - "CI/CD"
+
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - job: "Software Development Engineer (iOS & Backend)"
+        company: "Amazon"
+        companyUrl: "https://www.amazon.com"
+        date: "Sep 2022 - Present"
+        info:
+          enable: true
+          content: "Bangalore, India & Berlin, Germany"
+        content: |
+          - Engineer iOS components for Amazon India's high-traffic top-navigation surface (Amazon Pay, Now, Bazaar) in a large-scale production environment.
+          - Led native skeleton-loading in the Amazon shopping app, improving perceived performance across high-traffic surfaces.
+          - Design, build, and operate backend/middleware services for the Shopping Aids Platform (Coral service, DynamoDB impression store, DynamoDB Streams to the Andes data lake).
+          - Integrate A/B testing (Weblab), platform detection, and multi-language localization; mentor engineers through code reviews.
+      - job: "Senior Software Engineer (iOS)"
+        company: "Immobilien Scout GmbH"
+        date: "Jan 2018 - Aug 2022"
+        info:
+          enable: true
+          content: "Berlin, Germany"
+        content: |
+          - Ensured performance, quality, and responsiveness of production iOS applications.
+          - Set up and maintained CI/CD pipelines for mobile builds and releases.
+          - Fixed bottlenecks and defects; contributed to hiring, onboarding, and mentoring.
+      - job: "iOS Developer"
+        company: "Bonial International GmbH"
+        date: "Aug 2016 - Dec 2017"
+        info:
+          enable: true
+          content: "Berlin, Germany"
+        content: |
+          - Implemented the data sync feature and built features using the VIPER architecture.
+          - Wrote unit tests covering edge cases and reliability; fixed bottlenecks and defects.
+      - job: "Software Engineer (iOS)"
+        company: "VMware"
+        date: "Nov 2014 - Jul 2016"
+        info:
+          enable: true
+          content: "India"
+        content: |
+          - Developed advanced iOS applications; shipped features with cross-functional teams.
+          - Unit-tested for robustness; worked on defect resolution and performance.
+      - job: "Software Engineer (iOS)"
+        company: "Robosoft Technologies"
+        date: "Jun 2011 - Nov 2014"
+        info:
+          enable: true
+          content: "India"
+        content: |
+          - Built and shipped iOS features; ensured performance, quality, and responsiveness.
+          - Contributed to WWF Together, an iOS app recognized with the 2013 Apple Design Award.
+
+  education:
+    enable: true
+    title: "Education"
+    items:
+      - title: "Bachelor of Engineering (B.E.), Computer Science"
+        school:
+          name: "Visvesvaraya Technological University"
+        date: "2007 - 2011"
+
+  achievements:
+    enable: true
+    title: "Achievements"
+    items:
+      - title: "Apple Design Award (2013)"
+        content: "Contributed to WWF Together, an iOS app recognized for excellence in design and innovation."
+      - title: "High-Traffic Navigation at Amazon"
+        content: "Engineer Amazon India's top-navigation surface, serving strategic businesses at production scale."
+      - title: "Perceived-Performance Win"
+        content: "Led native skeleton-loading that measurably improved perceived app performance across high-traffic surfaces."
+
+  projects:
+    enable: false
+
+  contact:
+    enable: true
+    title: "Contact"
+    content: "Open to senior iOS and backend opportunities. Reach out by email or LinkedIn."
+    email: "sujit.yadawad@gmail.com"
+    btnName: "Email me"
+
+  footer:
+    socialNetworks:
+      github: "https://github.com/Sujit51"
+      linkedin: "https://www.linkedin.com/in/sujit-yadawad"
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    readTime:
+      enable: false
+    scrollprogress:
+      enable: true
