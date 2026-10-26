@@ -82,6 +82,16 @@ The tempting move was to build a separate skeleton system that ran alongside the
 
 Instead I folded the skeleton into the loading path the app already had. The existing machinery still decides when loading starts and ends; the skeleton simply rides along as what gets shown during that window, and if anything about it is unavailable the app falls back to exactly the old behaviour with no special handling. That gave me one code path instead of two, a safe fallback by default, and a system where any new screen can adopt a skeleton with just a small piece of configuration and an asset, no changes to the core. The win could spread across the app instead of living in one place.
 
+## A peek under the hood
+
+For the engineers reading this, here is the shape of it in plain iOS terms, without the internal details.
+
+The skeleton itself is deliberately boring: a `UIImageView` showing a lightweight image of the page layout, bundled with the app and laid over the web view (`WKWebView`). Because it is a local image and not a web render, it appears in well under a frame with zero network calls. I considered vector and native-layout skeletons too, but a pre-rendered image wins on the one thing that matters here, time-to-first-pixel, and the view stays abstract enough that I can swap the internals later without touching anything around it.
+
+The timing hangs off the web view's own navigation lifecycle. `WKWebView` hands its delegate a sequence of callbacks as a page loads, and I use them as the show and hide triggers: show the skeleton the moment a page starts loading (the earliest point the app knows a new page is coming), and hide it on the first reliable "real content is painting now" signal. I fall back to the later finished and stopped callbacks, and keep a timeout as a last-resort safety net so the skeleton can never get stuck on screen. When it does hide, it fades out with a short Core Animation transition rather than cutting, which bridges the moment real content takes over so the swap never looks abrupt.
+
+Memory is handled by letting the platform do the work. The skeleton is a child of the loading container, so it inherits that container's lifecycle, when loading ends the view is pulled out of the hierarchy and released by ARC, which means it costs nothing when it is not on screen. A teardown hook clears it immediately if the web view is disposed, and because the whole thing is an overlay that sits outside the page-load path, it adds no measurable cost to the real load it is decorating.
+
 ## How I knew it actually worked
 
 This is the part I care about most, because "it feels faster" is the easiest claim in engineering to fool yourself with. If you ship a perceived-performance change and just look at it, you will always conclude it worked, because you wanted it to.
