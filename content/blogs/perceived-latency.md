@@ -1,7 +1,7 @@
 ---
 title: "The second that decides everything: a story about perceived latency"
 date: 2026-10-26
-draft: true
+draft: false
 author: "Sujit Yadawad"
 tags: ["performance", "iOS", "mobile", "ux"]
 description: "A large shopping app, a blank grey screen, and what I learned building the thing that made it feel fast."
