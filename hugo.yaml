@@ -112,12 +112,16 @@ params:
       items:
         - "Swift / Objective-C"
         - "UIKit & SwiftUI"
+        - "Swift Concurrency"
         - "VIPER / MVVM"
+        - "Core Data"
+        - "Performance profiling (Instruments)"
+        - "A/B experimentation"
+        - "ML ranking integration"
         - "AWS (DynamoDB, Lambda, CloudWatch)"
-        - "Coral service framework"
-        - "Data pipelines (DynamoDB Streams, Andes)"
-        - "A/B testing (Weblab)"
+        - "Streaming data pipelines"
         - "CI/CD"
+        - "Mentorship"
 
   experience:
     enable: true
@@ -131,10 +135,11 @@ params:
           enable: true
           content: "Bangalore, India & Berlin, Germany"
         content: |
-          - Engineer iOS components for Amazon India's high-traffic top-navigation surface (Amazon Pay, Now, Bazaar) in a large-scale production environment.
-          - Led native skeleton-loading in the Amazon shopping app, improving perceived performance across high-traffic surfaces.
-          - Design, build, and operate backend/middleware services for the Shopping Aids Platform (Coral service, DynamoDB impression store, DynamoDB Streams to the Andes data lake).
-          - Integrate A/B testing (Weblab), platform detection, and multi-language localization; mentor engineers through code reviews.
+          - Build the top-of-app navigation for Amazon's shopping app, used by millions of shoppers for quick access to Amazon Pay, Amazon Now, and Bazaar, in a large-scale production environment.
+          - Designed and shipped native skeleton-loading that improved perceived performance by roughly 24% on a large multi-marketplace A/B experiment, with no regression in interactivity.
+          - Led the client integration of a machine-learning ranking model that personalized the navigation surface per customer for the first time, owning the cold-start strategy and the correctness of the engagement signal it learns from.
+          - Design, build, and operate server-side and middleware services on AWS (DynamoDB, Lambda, CloudWatch) with streaming data pipelines into a data lake.
+          - Expanded the navigation platform across multiple marketplaces with a reusable rollout runbook, and mentor engineers through code and design reviews.
       - job: "Senior Software Engineer (iOS)"
         company: "Immobilien Scout GmbH"
         date: "Jan 2018 - Aug 2022"
@@ -188,10 +193,14 @@ params:
     items:
       - title: "Apple Design Award (2013)"
         content: "Contributed to WWF Together, an iOS app recognized for excellence in design and innovation."
-      - title: "High-Traffic Navigation at Amazon"
-        content: "Engineer Amazon India's top-navigation surface, serving strategic businesses at production scale."
+      - title: "Navigation at Consumer Scale"
+        content: "Build and own the top-of-app navigation for Amazon's shopping app, serving strategic businesses to millions of shoppers in production."
       - title: "Perceived-Performance Win"
-        content: "Led native skeleton-loading that measurably improved perceived app performance across high-traffic surfaces."
+        content: "Designed native skeleton-loading that improved perceived performance by ~24% on a large A/B experiment, with interactivity held flat."
+      - title: "Personalized Navigation with ML"
+        content: "Led the client integration of a machine-learning ranking model that made the navigation surface personalized per customer for the first time."
+      - title: "Cross-Marketplace Platform"
+        content: "Expanded the navigation platform to new marketplaces through a repeatable rollout runbook the team now uses without me."
 
   projects:
     enable: false
@@ -199,7 +208,7 @@ params:
   contact:
     enable: true
     title: "Contact"
-    content: "Open to senior iOS and backend opportunities. Reach out by email or LinkedIn."
+    content: "Open to senior iOS and backend roles, based in Bangalore and open to remote. The fastest way to reach me is email or LinkedIn."
     email: "sujit.yadawad@gmail.com"
     btnName: "Email me"
 

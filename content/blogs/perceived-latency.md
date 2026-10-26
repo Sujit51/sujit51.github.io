@@ -1,7 +1,7 @@
 ---
 title: "Why perceived latency matters more than you think"
 date: 2026-10-26
-draft: false
+draft: true
 author: "Sujit Yadawad"
 tags: ["performance", "iOS", "mobile", "ux"]
 description: "Real speed and felt speed are different numbers, and the one your customers react to is the one you probably aren't measuring."
