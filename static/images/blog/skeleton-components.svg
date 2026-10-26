@@ -1,74 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="400" viewBox="0 0 860 400" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
-  <rect x="0" y="0" width="860" height="400" rx="16" fill="#ffffff" stroke="#e4e7ec"/>
-  <text x="430" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#101828">The pieces, at a glance</text>
-  <text x="430" y="58" text-anchor="middle" font-size="12" fill="#667085">Generic component view. New code in one module; the web view and loading overlay are reused as-is.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="960" height="420" rx="16" fill="#ffffff" stroke="#e4e7ec"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#101828">The pieces, at a glance</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12.5" fill="#667085">Green boxes are new code in one module. The web view and loading overlay are reused as-is.</text>
 
   <defs>
-    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
       <path d="M0,0 L8,4 L0,8 Z" fill="#667085"/>
     </marker>
   </defs>
   <style>
-    .box{rx:10; stroke-width:2;}
-    .lbl{font-size:13px; font-weight:600; fill:#101828;}
-    .sub{font-size:11px; fill:#667085;}
-    .edge{stroke:#667085; stroke-width:1.6; fill:none; marker-end:url(#arr);}
-    .et{font-size:11px; fill:#475467;}
+    .lbl{font-size:14px; font-weight:600; fill:#101828;}
+    .sub{font-size:11.5px; fill:#667085;}
+    .edge{stroke:#667085; stroke-width:1.8; fill:none; marker-end:url(#arr);}
+    .et{font-size:11.5px; font-weight:600; fill:#475467;}
   </style>
 
   <!-- Screen / VC -->
-  <rect x="40" y="110" width="170" height="64" rx="10" fill="#eef4ff" stroke="#2f6fed"/>
-  <text x="125" y="138" text-anchor="middle" class="lbl">Screen (view controller)</text>
-  <text x="125" y="156" text-anchor="middle" class="sub">hosts the web view</text>
+  <rect x="40" y="120" width="200" height="74" rx="12" fill="#eef4ff" stroke="#2f6fed" stroke-width="2"/>
+  <text x="140" y="150" text-anchor="middle" class="lbl">Screen (view controller)</text>
+  <text x="140" y="170" text-anchor="middle" class="sub">hosts the web view</text>
 
   <!-- Coordinator (NEW) -->
-  <rect x="345" y="110" width="190" height="64" rx="10" fill="#e9fbf0" stroke="#067647"/>
-  <text x="440" y="132" text-anchor="middle" class="lbl">Skeleton coordinator</text>
-  <text x="440" y="150" text-anchor="middle" class="sub">decides show / hide,</text>
-  <text x="440" y="165" text-anchor="middle" class="sub">owns the overlay lifecycle</text>
+  <rect x="380" y="116" width="220" height="82" rx="12" fill="#e9fbf0" stroke="#067647" stroke-width="2"/>
+  <text x="490" y="144" text-anchor="middle" class="lbl">Skeleton coordinator</text>
+  <text x="490" y="164" text-anchor="middle" class="sub">decides show / hide,</text>
+  <text x="490" y="181" text-anchor="middle" class="sub">owns the overlay lifecycle</text>
 
-  <!-- Config + asset (NEW) -->
-  <rect x="650" y="40" width="175" height="60" rx="10" fill="#e9fbf0" stroke="#067647"/>
-  <text x="737" y="66" text-anchor="middle" class="lbl">URL matcher + config</text>
-  <text x="737" y="84" text-anchor="middle" class="sub">which pages get a skeleton</text>
+  <!-- URL matcher (NEW) -->
+  <rect x="730" y="40" width="200" height="70" rx="12" fill="#e9fbf0" stroke="#067647" stroke-width="2"/>
+  <text x="830" y="70" text-anchor="middle" class="lbl">URL matcher + config</text>
+  <text x="830" y="90" text-anchor="middle" class="sub">which pages get a skeleton</text>
 
-  <rect x="650" y="118" width="175" height="60" rx="10" fill="#e9fbf0" stroke="#067647"/>
-  <text x="737" y="144" text-anchor="middle" class="lbl">Bundled image asset</text>
-  <text x="737" y="162" text-anchor="middle" class="sub">UIImageView skeleton</text>
+  <!-- Asset (NEW) -->
+  <rect x="730" y="130" width="200" height="70" rx="12" fill="#e9fbf0" stroke="#067647" stroke-width="2"/>
+  <text x="830" y="160" text-anchor="middle" class="lbl">Bundled image asset</text>
+  <text x="830" y="180" text-anchor="middle" class="sub">the UIImageView skeleton</text>
 
   <!-- WKWebView -->
-  <rect x="345" y="250" width="190" height="64" rx="10" fill="#eef4ff" stroke="#2f6fed"/>
-  <text x="440" y="278" text-anchor="middle" class="lbl">WKWebView</text>
-  <text x="440" y="296" text-anchor="middle" class="sub">navigation-delegate callbacks</text>
+  <rect x="380" y="300" width="220" height="74" rx="12" fill="#eef4ff" stroke="#2f6fed" stroke-width="2"/>
+  <text x="490" y="330" text-anchor="middle" class="lbl">WKWebView</text>
+  <text x="490" y="350" text-anchor="middle" class="sub">navigation-delegate callbacks</text>
 
   <!-- Loading overlay (reused) -->
-  <rect x="40" y="250" width="170" height="64" rx="10" fill="#f4f0ff" stroke="#7a5af8"/>
-  <text x="125" y="278" text-anchor="middle" class="lbl">Loading overlay</text>
-  <text x="125" y="296" text-anchor="middle" class="sub">reused; shows skeleton or grey</text>
+  <rect x="40" y="300" width="200" height="74" rx="12" fill="#f4f0ff" stroke="#7a5af8" stroke-width="2"/>
+  <text x="140" y="330" text-anchor="middle" class="lbl">Loading overlay</text>
+  <text x="140" y="350" text-anchor="middle" class="sub">reused; skeleton or grey</text>
 
   <!-- First-paint signal -->
-  <rect x="650" y="250" width="175" height="64" rx="10" fill="#fff8e6" stroke="#dc9b00"/>
-  <text x="737" y="278" text-anchor="middle" class="lbl">First-paint signal</text>
-  <text x="737" y="296" text-anchor="middle" class="sub">"content is on screen now"</text>
+  <rect x="730" y="300" width="200" height="74" rx="12" fill="#fff8e6" stroke="#dc9b00" stroke-width="2"/>
+  <text x="830" y="330" text-anchor="middle" class="lbl">First-paint signal</text>
+  <text x="830" y="350" text-anchor="middle" class="sub">"content is on screen now"</text>
 
   <!-- edges -->
-  <path class="edge" d="M210,142 L343,142"/>
-  <text x="275" y="134" text-anchor="middle" class="et">asks</text>
+  <path class="edge" d="M240,157 L378,157"/>
+  <text x="309" y="149" text-anchor="middle" class="et">asks</text>
 
-  <path class="edge" d="M535,128 L648,78"/>
-  <text x="600" y="96" text-anchor="middle" class="et">matches URL</text>
-  <path class="edge" d="M535,150 L648,150"/>
-  <text x="595" y="166" text-anchor="middle" class="et">builds view from</text>
+  <path class="edge" d="M600,146 L728,86"/>
+  <text x="668" y="104" text-anchor="middle" class="et">matches URL</text>
+  <path class="edge" d="M600,166 L728,166"/>
+  <text x="664" y="182" text-anchor="middle" class="et">builds from</text>
 
-  <path class="edge" d="M440,250 L440,176"/>
-  <text x="490" y="215" text-anchor="middle" class="et">show / hide triggers</text>
+  <path class="edge" d="M490,300 L490,200"/>
+  <text x="560" y="252" text-anchor="middle" class="et">show / hide</text>
 
-  <path class="edge" d="M345,290 L212,290"/>
-  <text x="278" y="282" text-anchor="middle" class="et">renders into</text>
+  <path class="edge" d="M380,337 L242,337"/>
+  <text x="311" y="329" text-anchor="middle" class="et">renders into</text>
 
-  <path class="edge" d="M650,282 L537,282"/>
-  <text x="595" y="300" text-anchor="middle" class="et">hide</text>
+  <path class="edge" d="M730,337 L602,337"/>
+  <text x="666" y="329" text-anchor="middle" class="et">hide</text>
 
-  <path class="edge" d="M125,250 L125,176"/>
-  <text x="125" y="215" text-anchor="middle" class="et">overlay on screen</text>
+  <path class="edge" d="M140,300 L140,196"/>
+  <text x="140" y="252" text-anchor="middle" class="et">on screen</text>
 </svg>
