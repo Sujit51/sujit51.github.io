@@ -52,6 +52,18 @@ The answer we landed on is an old one, done well: a skeleton. Instead of a blank
 
 Nothing about the real load time changes. But the wait stops being an empty, anxious void and becomes an occupied, predictable one. The customer sees the page forming, so the second that used to breed doubt now reads as progress.
 
+## It is not just us: Google treats the wait as a canvas
+
+I am not the only one who takes this seriously, and the company I point to most is Google. They have spent real design effort on the loading moment, to the point where their guidelines treat a progress indicator as a first-class piece of the interface rather than an afterthought you drop in when something is slow.
+
+The clearest example for me is the Google Home app. When it is connecting to a device, which is genuinely slow because it is doing real work over the network, it never leaves you staring at a dead spinner. The animation is lively and a little playful, it moves in a way that feels responsive, and the whole time it reads as "I am working on it" rather than "I am stuck." I have used it many times and not once did it make me feel like I was waiting around, even though, by the clock, I was.
+
+That is not an accident. Google's design system now ships what they call an expressive loading indicator: instead of a flat spinning circle, it is a shape that morphs and cycles through colour as it runs, deliberately designed to feel alive and fresh to the eye. Here is the idea, rough and in my own rendering:
+
+{{< figure src="/images/blog/expressive-loader.svg" alt="An animated loader: a rounded shape that morphs and cycles through blue, red, yellow, and green as it rotates" >}}
+
+Their own guidance makes the philosophy explicit: be honest about progress when you can show it, keep motion purposeful rather than decorative, and give the customer a sense of life during the wait. You can read it in [Material 3's progress-indicator guidelines](https://m3.material.io/components/progress-indicators/overview) and the newer [Material 3 expressive loading indicator for Android](https://developer.android.com/develop/ui/compose/components/loading-indicator). The thread that connects their work and mine is the same belief: the time a customer spends waiting is not dead space, it is a surface you get to design, and what you put there decides how the wait feels.
+
 ## Why this was the hard one on iOS
 
 Here is the part people are often surprised by: the same idea was meaningfully harder to deliver on iOS than on Android, and the reason is instructive.
