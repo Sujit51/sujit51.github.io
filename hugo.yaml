@@ -63,8 +63,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Sujit Yadawad."
-    subtitle: "I build high-traffic iOS apps and the backend that powers them."
-    content: "Software engineer with 14+ years shipping customer-facing mobile features in Swift and Objective-C, and designing, building, and operating server-side services on AWS. I own features end to end, from the native client through the service layer to analytics."
+    subtitle: "I build high-traffic iOS at consumer scale, and the services behind it."
+    content: "Senior iOS engineer with 14+ years in Swift and Objective-C. At Amazon I build the top-of-app navigation that millions of shoppers use every day, with a focus on performance and reliability, and I own features end to end, from the native client through the AWS services and data pipelines behind them."
     image: "/images/profile.jpg"
     bottomImage:
       enable: false
@@ -87,17 +87,20 @@ params:
     enable: true
     title: "About Me"
     content: |
-      I am a software engineer with over 14 years of experience building
-      high-traffic iOS applications and the backend services behind them.
+      I am a senior iOS engineer with 14+ years building high-traffic,
+      customer-facing apps in Swift and Objective-C, and the backend services
+      that power them.
 
-      At Amazon I build for the Indian emerging market: the top-of-app
-      navigation surface that routes millions of shoppers to Amazon Pay,
-      Amazon Now, and Bazaar, native skeleton-loading that improved
-      perceived performance across high-traffic surfaces, and the backend
-      and data pipelines of the Shopping Aids Platform.
+      At Amazon I build for the emerging market: the top-of-app navigation
+      that routes millions of shoppers to Amazon Pay, Amazon Now, and Bazaar,
+      native skeleton-loading that measurably improved perceived performance,
+      and the AWS services and data pipelines behind the Shopping Aids
+      Platform. I recently led the client integration of a machine-learning
+      ranking model that personalized the navigation surface per customer.
 
-      I care about performance, reliability, and craft at scale, and I enjoy
-      mentoring the engineers around me.
+      I take features from architecture through to launch and measurement, I
+      treat performance as something you prove against a control rather than
+      claim, and I enjoy mentoring the engineers around me.
     skills:
       enable: true
       title: "A few technologies I work with:"
