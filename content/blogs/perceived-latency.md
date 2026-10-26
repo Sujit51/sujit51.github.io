@@ -60,7 +60,7 @@ The clearest example for me is the Google Home app. When it is connecting to a d
 
 That is not an accident. Google's design system now ships what they call an expressive loading indicator: instead of a flat spinning circle, it is a shape that moves and cycles through colour as it runs, deliberately designed to feel alive and fresh to the eye. The device-connection animation in particular has a "reaching out" quality, ripples pulsing outward while the app does its real work. Here is that idea, rough and in my own rendering:
 
-{{< figure src="/images/blog/expressive-loader.svg" alt="An animated loader: coloured rings pulsing outward from a breathing core dot, cycling through blue, red, yellow, and green" >}}
+{{< figure src="/images/blog/expressive-loader.gif" alt="An animated loader: coloured rings pulsing outward from a breathing core dot, cycling through blue, red, yellow, and green" >}}
 
 Their own guidance makes the philosophy explicit: be honest about progress when you can show it, keep motion purposeful rather than decorative, and give the customer a sense of life during the wait. You can read it in [Material 3's progress-indicator guidelines](https://m3.material.io/components/progress-indicators/overview) and the newer [Material 3 expressive loading indicator for Android](https://developer.android.com/develop/ui/compose/components/loading-indicator), and if you want to see how much craft goes into these moments, this [Google Home animation study on Behance](https://www.behance.net/gallery/60610079/Google-Home-Animations) is worth a look. The thread that connects their work and mine is the same belief: the time a customer spends waiting is not dead space, it is a surface you get to design, and what you put there decides how the wait feels.
 
