@@ -30,6 +30,11 @@ Menus:
       title: Download CV
       url: "/cv/Sujit_Yadawad_CV.pdf"
       weight: 4
+    - identifier: blog
+      name: Blog
+      title: Blog
+      url: "/blogs"
+      weight: 5
 
 params:
   title: "Sujit Yadawad"
@@ -199,6 +204,12 @@ params:
     btnName: "Email me"
 
   footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: "Recent Posts"
+      enable: true
+      disableFeaturedImage: false
     socialNetworks:
       github: "https://github.com/Sujit51"
       linkedin: "https://www.linkedin.com/in/sujit-yadawad"
