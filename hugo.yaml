@@ -65,7 +65,7 @@ params:
     title: "Sujit Yadawad."
     subtitle: "I build high-traffic iOS apps and the backend that powers them."
     content: "Software engineer with 14+ years shipping customer-facing mobile features in Swift and Objective-C, and designing, building, and operating server-side services on AWS. I own features end to end, from the native client through the service layer to analytics."
-    image: ""
+    image: "/images/profile.jpg"
     bottomImage:
       enable: false
     button:
