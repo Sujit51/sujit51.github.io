@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="860" height="470" rx="16" fill="#ffffff" stroke="#e4e7ec"/>
+  <text x="430" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#101828">Two ways to wait for the same page</text>
+
+  <!-- LEFT phone: blank -->
+  <text x="225" y="92" text-anchor="middle" font-size="16" font-weight="600" fill="#b42318">Before: a blank screen</text>
+  <rect x="135" y="110" width="180" height="300" rx="26" fill="#f2f4f7" stroke="#d0d5dd" stroke-width="2"/>
+  <rect x="150" y="130" width="150" height="260" rx="10" fill="#e9ecf1"/>
+  <circle cx="225" cy="250" r="20" fill="none" stroke="#98a2b3" stroke-width="4" stroke-dasharray="80 40">
+    <animateTransform attributeName="transform" type="rotate" from="0 225 250" to="360 225 250" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="225" y="300" text-anchor="middle" font-size="12" fill="#98a2b3">loading…</text>
+  <text x="225" y="438" text-anchor="middle" font-size="13" fill="#667085">Nothing to look at.</text>
+  <text x="225" y="456" text-anchor="middle" font-size="13" fill="#667085">The wait feels long and uncertain.</text>
+
+  <!-- RIGHT phone: skeleton -->
+  <text x="635" y="92" text-anchor="middle" font-size="16" font-weight="600" fill="#067647">After: a skeleton</text>
+  <rect x="545" y="110" width="180" height="300" rx="26" fill="#f2f4f7" stroke="#d0d5dd" stroke-width="2"/>
+  <!-- skeleton blocks -->
+  <rect x="560" y="128" width="150" height="54" rx="8" fill="#dfe3e8"/>
+  <rect x="560" y="190" width="92" height="12" rx="6" fill="#e4e7ec"/>
+  <rect x="560" y="208" width="140" height="10" rx="5" fill="#eceff3"/>
+  <rect x="560" y="232" width="70" height="70" rx="8" fill="#dfe3e8"/>
+  <rect x="640" y="232" width="70" height="70" rx="8" fill="#dfe3e8"/>
+  <rect x="560" y="312" width="70" height="70" rx="8" fill="#dfe3e8"/>
+  <rect x="640" y="312" width="70" height="70" rx="8" fill="#dfe3e8"/>
+  <rect x="545" y="110" width="180" height="300" rx="26" fill="url(#shimmer)" opacity="0.6"/>
+  <defs>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="1.4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <text x="635" y="438" text-anchor="middle" font-size="13" fill="#667085">The shape of the page shows at once.</text>
+  <text x="635" y="456" text-anchor="middle" font-size="13" fill="#667085">The same wait feels quick.</text>
+</svg>
