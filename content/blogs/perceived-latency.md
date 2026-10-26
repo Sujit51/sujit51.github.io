@@ -90,6 +90,16 @@ The skeleton itself is deliberately boring: a `UIImageView` showing a lightweigh
 
 The timing hangs off the web view's own navigation lifecycle. `WKWebView` hands its delegate a sequence of callbacks as a page loads, and I use them as the show and hide triggers: show the skeleton the moment a page starts loading (the earliest point the app knows a new page is coming), and hide it on the first reliable "real content is painting now" signal. I fall back to the later finished and stopped callbacks, and keep a timeout as a last-resort safety net so the skeleton can never get stuck on screen. When it does hide, it fades out with a short Core Animation transition rather than cutting, which bridges the moment real content takes over so the swap never looks abrupt.
 
+{{< figure src="/images/blog/skeleton-lifecycle.svg" alt="Timeline showing the skeleton appearing at navigation start and fading out the moment real content paints, with the WKWebView delegate callbacks that trigger each step" >}}
+
+The whole thing is small enough to sketch in a few boxes. Everything new sits in one module; the web view and the loading overlay it already had are reused untouched.
+
+{{< figure src="/images/blog/skeleton-components.svg" alt="Component diagram: the screen asks a skeleton coordinator, which matches the URL and builds an image-based skeleton, hands it to the loading overlay over the WKWebView, and hides it on the first-paint signal" >}}
+
+One piece worth drawing out is how a page decides whether it even gets a skeleton. On every navigation the coordinator runs a quick, synchronous check: it reduces the destination URL to a canonical key (dropping the parameters that do not change which page it is), matches that against the small set of page types configured to have a skeleton, and returns the matching skeleton view or nothing at all. On a miss, or any error, it returns nothing and the app shows the old grey screen exactly as before. No network, nothing on the critical load path.
+
+{{< figure src="/images/blog/skeleton-url-match.svg" alt="Flow: destination URL is reduced to a key, matched against configured page types; a match returns the skeleton, a miss returns nil and the grey fallback" >}}
+
 Memory is handled by letting the platform do the work. The skeleton is a child of the loading container, so it inherits that container's lifecycle, when loading ends the view is pulled out of the hierarchy and released by ARC, which means it costs nothing when it is not on screen. A teardown hook clears it immediately if the web view is disposed, and because the whole thing is an overlay that sits outside the page-load path, it adds no measurable cost to the real load it is decorating.
 
 ## How I knew it actually worked
