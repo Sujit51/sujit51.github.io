@@ -104,8 +104,15 @@ On the business axis, and this is the one that ends the argument, customer behav
 
 This matters beyond one feature. It is easy for a team to deprioritize perceived performance because it sounds cosmetic next to "hard" work on throughput or backend latency. The evidence says that is a mistake. The blank second is not cosmetic. It is one of the cheapest, highest-leverage things you can fix, and it moves the metrics on both sides of the table.
 
-## What I believe now
+## What I took away
 
-Real latency and perceived latency are different numbers, and the one your customers actually react to is usually the one you are not measuring. Shaving milliseconds off a backend call is worth doing. So is thinking hard about the second after a tap, because that second is the speed people truly experience, and it is often decided entirely by what you chose to put on the screen while they waited.
+A few things I am keeping from this:
 
-Measure felt speed directly. Improve it on purpose. Prove it against a control. The payoff is an app that feels fast, which is the only kind of fast a customer ever notices.
+- **Real latency and perceived latency are different numbers, and customers react to the second one.** They never see your percentiles; they see a screen. The time after a tap is often decided entirely by what you chose to put there while they waited.
+- **The blank second is not cosmetic, and the doubt about it is now settled for me.** The question I started with was whether anyone still cares about perceived latency in a world of fast phones and short attention spans. The experiment answered it on both axes: a perceived-speed metric moved and held under a controlled comparison, and customer behaviour moved with it, enough to clear the bar to launch. Customers still care. The evidence says so, not my opinion.
+- **Prove felt speed, do not admire it.** It is the easiest thing in engineering to fool yourself about, so measure it directly, run it against a control, and keep a guardrail on real interactivity so you are not shipping a costume.
+- **Treat the wait as a surface you design.** A skeleton that shows the shape, or a loader that feels alive the way Google's does, both come from the same belief: the loading moment is not dead space.
+
+So yes, perceived latency is worth your time. It is one of the cheapest, highest-leverage things you can improve, and the return shows up on both sides of the table, the latency metric and the business one.
+
+One honest caveat to close on. Making an app *feel* fast is not a licence to stop making it *actually* fast. Perceived-latency work buys you the first second; real page-loading work is what earns the rest, and the two are complementary, not substitutes. How I think about genuinely reducing page load, not just the feel of it, is a longer story. I will write that one up another day.
